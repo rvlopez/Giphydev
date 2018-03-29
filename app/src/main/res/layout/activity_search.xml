@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <include layout="@layout/horizontal_progress_bar" />
+
+    <LinearLayout
+        android:id="@+id/gifResultsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="265dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="10dp"
+            app:queryBackground="@color/white"
+            app:submitBackground="@color/white"
+            app:defaultQueryHint="@string/search_view_hint_text"
+            app:searchHintIcon="@null"
+            app:searchIcon="@null" />
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/gifRecyclerHeader"
+            style="@style/SearchHeaderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/gifResultsValue"
+            style="@style/SearchHeaderCounterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/gifRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="vertical" />
+
+    <include layout="@layout/error_layout" />
+
+    <include layout="@layout/no_results_layout" />
+
+</LinearLayout>

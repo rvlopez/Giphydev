@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.rviciana.giphydev"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode "${application_versionCode}".toInteger().intValue()
+        versionName "${application_versionName}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+kapt {
+    generateStubs = true
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "com.android.support:appcompat-v7:$appCompat"
+    compile "com.android.support.constraint:constraint-layout:1.0.2"
+    compile "com.android.support:recyclerview-v7:$appCompat"
+
+    compile "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+
+    compile "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    compile "io.reactivex:rxjava:$rxJava"
+    compile "io.reactivex:rxandroid:$rxAndroid"
+
+    kapt 'com.google.dagger:dagger-compiler:2.8'
+    compile 'com.google.dagger:dagger:2.8'
+
+    implementation("com.github.bumptech.glide:glide:$glideVersion") {
+        exclude group: "com.android.support"
+    }
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}

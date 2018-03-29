@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="app_name">GiphyDev</string>
+
+    <string name="header_trending_now">Trending now</string>
+
+    <!-- Activities -->
+    <string name="main_activity_toolbar_title">Giphy Api</string>
+    <string name="about_activity_toolbar_title">About</string>
+
+    <!-- Descriptions -->
+    <string name="splash_image_description">Splash activity logo</string>
+    <string name="search_image_description">Search activity logo</string>
+    <string name="about_image_description">About activity logo</string>
+
+    <!-- No results -->
+    <string name="error_message">Sorry, something went wrong.</string>
+    <string name="no_results_found">No GIFs found for %1$s.</string>
+
+    <!-- Overflow menu items -->
+    <string name="search_item_menu">Search</string>
+    <string name="info_item_menu">Info</string>
+    <string name="filter_item_menu">Filter</string>
+    <string name="gif_results_value">%1$s GIFs</string>
+
+    <!-- Text contents -->
+    <string name="about_activity_description">Demo application in Kotlin. \nUsing Giphy API \nJust for practice.</string>
+    <string name="about_activity_me">Developed by rvlopez</string>
+    <string name="search_view_hint_text">Search all the GIFs</string>
+    <string name="filter_dialog_title">Search option</string>
+    <string name="filter_dialog_message">Choose the search option</string>
+
+</resources>

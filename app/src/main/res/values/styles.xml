@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <style name="TitleTextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="NormalTextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ItalicTextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="SearchHeaderTextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SearchHeaderCounterTextView">
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>
