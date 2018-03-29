@@ -2,7 +2,6 @@ package com.example.rviciana.giphydev.search.view
 
 import android.app.Activity
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.widget.LinearLayoutManager
@@ -24,7 +23,10 @@ import kotlinx.android.synthetic.main.no_results_layout.*
 import kotlinx.android.synthetic.main.toolbar.*
 import javax.inject.Inject
 
-class SearchActivity : AppCompatActivity(), SearchActivityView, View.OnClickListener {
+class SearchActivity : BaseActivity(),
+        SearchActivityView,
+        View.OnClickListener,
+        GifListener {
 
     @Inject lateinit var searchPresenter: SearchPresenter
 
@@ -53,7 +55,7 @@ class SearchActivity : AppCompatActivity(), SearchActivityView, View.OnClickList
         searchIcon.setOnClickListener(this)
     }
 
-    private fun initToolbar() {
+    override fun initToolbar() {
         toolbar.setTitle(R.string.main_activity_toolbar_title)
         setSupportActionBar(toolbar)
     }
@@ -126,9 +128,16 @@ class SearchActivity : AppCompatActivity(), SearchActivityView, View.OnClickList
         initRecyclerView(dataList)
     }
 
+    override fun onGifClicked(gif: Gif) {
+        val intent = Intent(this, SearchDetailActivity::class.java)
+        intent.putExtra("GIF", gif)
+        startActivity(intent)
+        overridePendingTransition(R.anim.enter_from_left, R.anim.exit_out_left)
+    }
+
     private fun initRecyclerView(dataList: MutableList<Gif>) {
         gifRecyclerView.layoutManager = LinearLayoutManager(this)
-        gifRecyclerView.adapter = SearchAdapter(dataList)
+        gifRecyclerView.adapter = SearchAdapter(dataList, this)
     }
 
     private fun setRecyclerViewHeader(header: String) {
@@ -151,7 +160,7 @@ class SearchActivity : AppCompatActivity(), SearchActivityView, View.OnClickList
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        val id: Int = item!!.itemId
+        val id = item!!.itemId
 
         when (id) {
             R.id.filter -> {

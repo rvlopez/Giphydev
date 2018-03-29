@@ -28,6 +28,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun initApplication() {
         startActivity(Intent(this, SearchActivity::class.java))
+        finish();
     }
 
     private fun scheduleNewActivity() {

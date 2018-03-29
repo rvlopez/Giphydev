@@ -1,14 +1,14 @@
 package com.example.rviciana.giphydev.about
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import com.bumptech.glide.Glide
 import com.example.rviciana.giphydev.R
+import com.example.rviciana.giphydev.search.view.BaseActivity
 import kotlinx.android.synthetic.main.activity_about.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-class AboutActivity : AppCompatActivity() {
+class AboutActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,12 +19,9 @@ class AboutActivity : AppCompatActivity() {
         setContent()
     }
 
-    private fun initToolbar() {
-        toolbar.setNavigationIcon(R.drawable.arrow_left)
+    override fun initToolbar() {
         toolbar.setTitle(R.string.about_activity_toolbar_title)
-
-        setSupportActionBar(toolbar)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        super.initToolbar()
     }
 
     private fun initAboutLogo() {
@@ -37,21 +34,5 @@ class AboutActivity : AppCompatActivity() {
     private fun setContent() {
         aboutContent.text = getString(R.string.about_activity_description)
         aboutMe.text = getString(R.string.about_activity_me)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        val id = item!!.itemId
-
-        when (id) {
-            android.R.id.home -> { onBackPressed() }
-        }
-
-        return super.onOptionsItemSelected(item)
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        finish()
-        overridePendingTransition(R.anim.enter_from_right, R.anim.exit_out_right)
     }
 }

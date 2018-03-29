@@ -21,6 +21,7 @@
     <string name="search_item_menu">Search</string>
     <string name="info_item_menu">Info</string>
     <string name="filter_item_menu">Filter</string>
+    <string name="external_item_menu">External</string>
     <string name="gif_results_value">%1$s GIFs</string>
 
     <!-- Text contents -->
@@ -29,5 +30,6 @@
     <string name="search_view_hint_text">Search all the GIFs</string>
     <string name="filter_dialog_title">Search option</string>
     <string name="filter_dialog_message">Choose the search option</string>
+    <string name="detail_activity_toolbar_title">Detail</string>
 
 </resources>

@@ -9,7 +9,8 @@ import com.example.rviciana.giphydev.R
 import com.example.rviciana.giphydev.search.model.entities.Gif
 import kotlinx.android.synthetic.main.activity_search_item.view.*
 
-class SearchAdapter(private val dataList: MutableList<Gif>): RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
+class SearchAdapter(private val dataList: MutableList<Gif>,
+                    private val gifListener: GifListener): RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
 
     override fun getItemCount() = dataList.size
 
@@ -18,14 +19,15 @@ class SearchAdapter(private val dataList: MutableList<Gif>): RecyclerView.Adapte
             .inflate(R.layout.activity_search_item, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int)
-            = holder.bind(dataList[position])
+            = holder.bind(dataList[position], gifListener)
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        fun bind(item: Gif) {
+        fun bind(item: Gif, gifListener: GifListener) {
             val context = itemView.context
-            val imageUrl = item.images.fixed_height.url
+            val imageUrl = item.images.fixedHeight.url
 
             Glide.with(context).asGif().load(imageUrl).into(itemView.gif)
+            itemView.setOnClickListener { gifListener.onGifClicked(item) }
         }
     }
 }
