@@ -13,7 +13,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class SearchModule(private val activity: SearchActivity) {
+class SearchModule {
 
     @Provides
     fun provideSearchApi(): SearchApi {

@@ -15,7 +15,6 @@ import com.example.rviciana.GiphyApplication
 import com.example.rviciana.giphydev.R
 import com.example.rviciana.giphydev.about.AboutActivity
 import com.example.rviciana.giphydev.search.di.module.SearchModule
-import com.example.rviciana.giphydev.search.model.entities.Data
 import com.example.rviciana.giphydev.search.model.entities.Gif
 import com.example.rviciana.giphydev.search.presenter.SearchPresenter
 import kotlinx.android.synthetic.main.activity_search.*
@@ -32,7 +31,7 @@ class SearchActivity : AppCompatActivity(), SearchActivityView, View.OnClickList
     lateinit var search: String
 
     private val Activity.app: GiphyApplication get() = application as GiphyApplication
-    private val component by lazy { app.component.plus(SearchModule(this)) }
+    private val component by lazy { app.component.plus(SearchModule()) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
