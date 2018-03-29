@@ -1,8 +1,18 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+# GiphyDev
 
-\f0\fs24 \cf0 #README}
+A simple application developed to learn Kotlin using the public Giphy API.
+https://developers.giphy.com/
+
+## Dependencies used:
+
+* RxJava -> Reactive Programming (https://github.com/ReactiveX/RxJava)
+* Dagger 2 -> Inject dependencies (https://google.github.io/dagger/)
+* Retrofit -> Request/Response API. (http://square.github.io/retrofit/)
+* OkHttp -> An HTTP & HTTP/2 client for Android and Java applications. (https://github.com/square/okhttp)
+* GSON -> Parse JSON to Java POJOs (https://github.com/google/gson)
+* ButterKnife -> Bind views to java code easily and avoiding some code boilerplate (http://jakewharton.github.io/butterknife/)
+
+## Functionalities implemented:
+
+* Bootstrap a new Android app.
+* Request the MARVEL API to show MARVEL's hero data and parse the JSON response.
