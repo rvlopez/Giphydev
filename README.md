@@ -9,9 +9,11 @@ https://developers.giphy.com/
 
 GIPHY's API makes it dead simple for developers to incorporate GIPHY's vast library right inside of their apps. Use it across all types of apps: messaging, chat, dating, creation, community, and more!
 
+    https://developers.giphy.com/docs/
+
 ## API Highlights
 
-    HOST
+###### HOST
     http://api.giphy.com
 
 ### Search Endpoint
