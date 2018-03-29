@@ -1,22 +1,33 @@
 package com.example.rviciana.giphydev.search.model.entities
 
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
 data class Gif (
         val type: String,
         val id: String,
         val slug: String,
         val url: String,
-        val bitly_url: String,
-        val embed_url: String,
+        @SerializedName("bitly_url")
+        val bitlyUrl: String,
+        @SerializedName("embed_url")
+        val embedUrl: String,
         val username: String,
         val source: String,
         val rating: String,
-        val content_url: String,
+        @SerializedName("content_url")
+        val contentUrl: String,
         val user: User,
-        val source_post_url: String,
-        val update_datetime: String,
-        val create_datetime: String,
-        val import_datetime: String,
-        val trending_datetime: String,
+        @SerializedName("source_post_url")
+        val sourcePostUrl: String,
+        @SerializedName("update_datetime")
+        val updateDatetime: String,
+        @SerializedName("create_datetime")
+        val createDatetime: String,
+        @SerializedName("import_datetime")
+        val importDatetime: String,
+        @SerializedName("trending_datetime")
+        val trendingDatetime: String,
         val images: Images,
         val title: String
-)
+) : Serializable

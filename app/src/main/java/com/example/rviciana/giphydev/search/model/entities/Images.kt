@@ -1,7 +1,13 @@
 package com.example.rviciana.giphydev.search.model.entities
 
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
 data class Images(
-        val fixed_height: FixedHeight,
-        val fixed_height_still: FixedHeightStill,
-        val fixed_height_downsampled: FixedHeightDownsampled
-)
+        @SerializedName("fixed_height")
+        val fixedHeight: FixedHeight,
+        @SerializedName("fixed_height_still")
+        val fixedHeightStill: FixedHeightStill,
+        @SerializedName("fixed_height_downsampled")
+        val fixedHeightDownsampled: FixedHeightDownsampled
+) : Serializable
