@@ -39,4 +39,8 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="LinkTextView" parent="ItalicTextView" >
+        <item name="android:textColor">@color/indigo</item>
+    </style>
+
 </resources>

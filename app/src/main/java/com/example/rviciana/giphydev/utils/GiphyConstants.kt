@@ -2,6 +2,8 @@ package com.example.rviciana.giphydev.utils
 
 object GiphyConstants {
 
+    const val GITHUB = "https://github.com/rvlopez"
+
     const val HOST = "http://api.giphy.com"
     const val PUBLIC_KEY = "uZoxXrFsCFbGMrBOKy65ypwrea8a36SG"
 

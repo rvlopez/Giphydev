@@ -26,7 +26,8 @@
 
     <!-- Text contents -->
     <string name="about_activity_description">Demo application in Kotlin. \nUsing Giphy API \nJust for practice.</string>
-    <string name="about_activity_me">Developed by rvlopez</string>
+    <string name="about_activity_me">Developed by</string>
+    <string name="about_activity_github_user">rvlopez</string>
     <string name="search_view_hint_text">Search all the GIFs</string>
     <string name="filter_dialog_title">Search option</string>
     <string name="filter_dialog_message">Choose the search option</string>
