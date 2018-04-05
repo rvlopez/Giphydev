@@ -62,5 +62,5 @@ NOTE: The data returned mirrors the GIFs showcased on the GIPHY homepage. Return
 * Retrofit 2 -> Request/Response API. (http://square.github.io/retrofit/)
 * OkHttp -> An HTTP & HTTP/2 client for Android and Java applications. (https://github.com/square/okhttp)
 * GSON -> Parse JSON to Java POJOs (https://github.com/google/gson)
-* Anko -> Anko is a Kotlin library which makes Android application development faster and easier. It makes your code clean and easy to read, and lets you forget about rough edges of the Android SDK for Java. https://github.com/Kotlin/anko
+* Anko -> Anko is a Kotlin library which makes Android application development faster and easier. It makes your code clean and easy to read, and lets you forget about rough edges of the Android SDK for Java. (https://github.com/Kotlin/anko)
 
